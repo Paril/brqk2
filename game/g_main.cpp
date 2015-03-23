@@ -64,13 +64,13 @@ cvar_t	*randomrespawn;
 
 void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
 void ClientThink (edict_t *ent, usercmd_t *cmd);
-bool ClientConnect (edict_t *ent, char *userinfo);
+qboolean ClientConnect (edict_t *ent, char *userinfo);
 void ClientUserinfoChanged (edict_t *ent, char *userinfo);
 void ClientDisconnect (edict_t *ent);
 void ClientBegin (edict_t *ent);
 void ClientCommand (edict_t *ent);
 void RunEntity (edict_t *ent);
-void WriteGame (char *filename, bool autosave);
+void WriteGame (char *filename, qboolean autosave);
 void ReadGame (char *filename);
 void WriteLevel (char *filename);
 void ReadLevel (char *filename);
@@ -98,7 +98,7 @@ Returns a pointer to the structure with all entry points
 and global variables
 =================
 */
-extern "C" game_export_t *GetGameAPI (game_import_t *import)
+game_export_t *GetGameAPI (game_import_t *import)
 {
 	gi = *import;
 

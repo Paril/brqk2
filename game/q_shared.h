@@ -34,6 +34,10 @@
 #define idaxp	0
 #endif
 
+#ifndef qboolean
+#define qboolean int
+#endif
+
 typedef unsigned char 		byte;
 
 
@@ -301,7 +305,7 @@ typedef struct cvar_s
 	char		*string;
 	char		*latched_string;	// for CVAR_LATCH vars
 	int			flags;
-	bool	modified;	// set each time the cvar is changed
+	qboolean	modified;	// set each time the cvar is changed
 	float		value;
 	struct cvar_s *next;
 } cvar_t;
@@ -426,8 +430,8 @@ typedef struct mapsurface_s  // used internally due to name len probs //ZOID
 // a trace is returned when a box is swept through the world
 typedef struct
 {
-	bool	allsolid;	// if true, plane is not valid
-	bool	startsolid;	// if true, the initial point was in a solid area
+	qboolean	allsolid;	// if true, plane is not valid
+	qboolean	startsolid;	// if true, the initial point was in a solid area
 	float		fraction;	// time completed, 1.0 = didn't hit anything
 	vec3_t		endpos;		// final position
 	cplane_t	plane;		// surface normal at impact
@@ -507,7 +511,7 @@ typedef struct
 
 	// command (in)
 	usercmd_t		cmd;
-	bool		snapinitial;	// if s has been changed outside pmove
+	qboolean		snapinitial;	// if s has been changed outside pmove
 
 	// results (out)
 	int			numtouch;

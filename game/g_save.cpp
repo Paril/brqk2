@@ -483,7 +483,7 @@ A single player death will automatically restore from the
 last save position.
 ============
 */
-void WriteGame (char *filename, bool autosave)
+void WriteGame (char *filename, qboolean autosave)
 {
 	FILE	*f;
 	int		i;

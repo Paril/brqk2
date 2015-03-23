@@ -1798,7 +1798,7 @@ Changing levels will NOT cause this to be called again, but
 loadgames will.
 ============
 */
-bool ClientConnect (edict_t *ent, char *userinfo)
+qboolean ClientConnect (edict_t *ent, char *userinfo)
 {
 	char	*value;
 
