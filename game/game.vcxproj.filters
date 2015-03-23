@@ -17,205 +17,205 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dm_ball.c">
+    <ClCompile Include="dm_ball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dm_tag.c">
+    <ClCompile Include="dm_tag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_ai.c">
+    <ClCompile Include="g_ai.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_chase.c">
+    <ClCompile Include="g_chase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_cmds.c">
+    <ClCompile Include="g_cmds.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_combat.c">
+    <ClCompile Include="g_combat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_func.c">
+    <ClCompile Include="g_func.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_items.c">
+    <ClCompile Include="g_items.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_main.c">
+    <ClCompile Include="g_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_misc.c">
+    <ClCompile Include="g_misc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_monster.c">
+    <ClCompile Include="g_monster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_newai.c">
+    <ClCompile Include="g_newai.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_newdm.c">
+    <ClCompile Include="g_newdm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_newfnc.c">
+    <ClCompile Include="g_newfnc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_newtarg.c">
+    <ClCompile Include="g_newtarg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_newtrig.c">
+    <ClCompile Include="g_newtrig.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_newweap.c">
+    <ClCompile Include="g_newweap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_phys.c">
+    <ClCompile Include="g_phys.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_save.c">
+    <ClCompile Include="g_save.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_spawn.c">
+    <ClCompile Include="g_spawn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_sphere.c">
+    <ClCompile Include="g_sphere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_svcmds.c">
+    <ClCompile Include="g_svcmds.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_target.c">
+    <ClCompile Include="g_target.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_trigger.c">
+    <ClCompile Include="g_trigger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_turret.c">
+    <ClCompile Include="g_turret.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_utils.c">
+    <ClCompile Include="g_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_weapon.c">
+    <ClCompile Include="g_weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_actor.c">
+    <ClCompile Include="m_actor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_berserk.c">
+    <ClCompile Include="m_berserk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_boss2.c">
+    <ClCompile Include="m_boss2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_boss3.c">
+    <ClCompile Include="m_boss3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_boss5.c">
+    <ClCompile Include="m_boss5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_boss31.c">
+    <ClCompile Include="m_boss31.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_boss32.c">
+    <ClCompile Include="m_boss32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_brain.c">
+    <ClCompile Include="m_brain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_carrier.c">
+    <ClCompile Include="m_carrier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_chick.c">
+    <ClCompile Include="m_chick.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_fixbot.c">
+    <ClCompile Include="m_fixbot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_flash.c">
+    <ClCompile Include="m_flash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_flipper.c">
+    <ClCompile Include="m_flipper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_float.c">
+    <ClCompile Include="m_float.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_flyer.c">
+    <ClCompile Include="m_flyer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_gekk.c">
+    <ClCompile Include="m_gekk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_gladb.c">
+    <ClCompile Include="m_gladb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_gladiator.c">
+    <ClCompile Include="m_gladiator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_gunner.c">
+    <ClCompile Include="m_gunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_hover.c">
+    <ClCompile Include="m_hover.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_infantry.c">
+    <ClCompile Include="m_infantry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_insane.c">
+    <ClCompile Include="m_insane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_medic.c">
+    <ClCompile Include="m_medic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_move.c">
+    <ClCompile Include="m_move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_mutant.c">
+    <ClCompile Include="m_mutant.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_parasite.c">
+    <ClCompile Include="m_parasite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_soldier.c">
+    <ClCompile Include="m_soldier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_stalker.c">
+    <ClCompile Include="m_stalker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_supertank.c">
+    <ClCompile Include="m_supertank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_tank.c">
+    <ClCompile Include="m_tank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_turret.c">
+    <ClCompile Include="m_turret.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_widow.c">
+    <ClCompile Include="m_widow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="m_widow2.c">
+    <ClCompile Include="m_widow2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="p_client.c">
+    <ClCompile Include="p_client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="p_hud.c">
+    <ClCompile Include="p_hud.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="p_trail.c">
+    <ClCompile Include="p_trail.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="p_view.c">
+    <ClCompile Include="p_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="p_weapon.c">
+    <ClCompile Include="p_weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="q_shared.c">
+    <ClCompile Include="q_shared.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_modeltrace.c">
+    <ClCompile Include="g_modeltrace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

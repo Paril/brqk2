@@ -1,1 +1,7 @@
 /game/.vs
+/game/Release
+/game/Debug
+/game/game.vcxproj.user
+/game/game.opensdf
+/game/game.sdf
+/game/game.v12.suo

@@ -1,16 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug Alpha|Win32">
-      <Configuration>Debug Alpha</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release Alpha|Win32">
-      <Configuration>Release Alpha</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
@@ -29,17 +21,7 @@
     <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Alpha|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Alpha|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
@@ -51,85 +33,21 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Alpha|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Alpha|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Alpha|Win32'">
-    <OutDir>.\..\DebugAxp\</OutDir>
-    <IntDir>.\DebugAxp\</IntDir>
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>F:\q2\xatrogue\</OutDir>
-    <IntDir>.\..\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>gamex86</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Alpha|Win32'">
-    <OutDir>.\..\ReleaseAXP\</OutDir>
-    <IntDir>.\ReleaseAXP\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>F:\q2\xatrogue\</OutDir>
-    <IntDir>.\debug\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>gamex86</TargetName>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Alpha|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
-      <Optimization>Disabled</Optimization>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\DebugAxp\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\DebugAxp\game.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\DebugAxp\</ObjectFileName>
-      <ProgramDataBaseFileName>.\DebugAxp\</ProgramDataBaseFileName>
-      <AdditionalOptions> /QA21164 /MTd </AdditionalOptions>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-    </ClCompile>
-    <Midl>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\..\DebugAxp\game.tlb</TypeLibraryName>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
-      <TargetEnvironment>Win32</TargetEnvironment>
-    </Midl>
-    <ResourceCompile>
-      <Culture>0x0409</Culture>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ResourceCompile>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\DebugAxp\game.bsc</OutputFile>
-    </Bscmake>
-    <Link>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <LinkDLL>true</LinkDLL>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>..\DebugAxp/gameaxp.dll</OutputFile>
-      <ImportLibrary>.\..\DebugAxp\gameaxp.lib</ImportLibrary>
-      <BaseAddress>0x20000000</BaseAddress>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -141,11 +59,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\..\Release\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
-      <PrecompiledHeaderOutputFile>.\..\Release\game.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\..\Release\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\Release\</ProgramDataBaseFileName>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Midl>
@@ -169,54 +83,8 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>F:\q2\xatrogue\gamex86.dll</OutputFile>
-      <ImportLibrary>.\..\..\release\gamex86.lib</ImportLibrary>
       <BaseAddress>0x20000000</BaseAddress>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Alpha|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <StringPooling>true</StringPooling>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <Optimization>MaxSpeed</Optimization>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>OldStyle</DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\ReleaseAXP\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\ReleaseAXP\game.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\ReleaseAXP\</ObjectFileName>
-      <ProgramDataBaseFileName>.\ReleaseAXP\</ProgramDataBaseFileName>
-      <AdditionalOptions> /QA21164 </AdditionalOptions>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-    </ClCompile>
-    <Midl>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\..\ReleaseAXP\game.tlb</TypeLibraryName>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
-      <TargetEnvironment>Win32</TargetEnvironment>
-    </Midl>
-    <ResourceCompile>
-      <Culture>0x0409</Culture>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ResourceCompile>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\ReleaseAXP\game.bsc</OutputFile>
-    </Bscmake>
-    <Link>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <LinkDLL>true</LinkDLL>
-      <OutputFile>..\ReleaseAXP/gameaxp.dll</OutputFile>
-      <ImportLibrary>.\..\ReleaseAXP\gameaxp.lib</ImportLibrary>
-      <BaseAddress>0x20000000</BaseAddress>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Windows</SubSystem>
       <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -231,11 +99,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BUILDING_REF_GL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
-      <PrecompiledHeaderOutputFile>.\debug\game.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\debug\</ObjectFileName>
-      <ProgramDataBaseFileName>.\debug\</ProgramDataBaseFileName>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Midl>
@@ -259,7 +123,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>F:\q2\xatrogue\gamex86.dll</OutputFile>
-      <ImportLibrary>.\..\..\debug\gamex86.lib</ImportLibrary>
       <BaseAddress>0x20000000</BaseAddress>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
@@ -270,73 +133,73 @@
     <CustomBuild Include="game.def" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dm_ball.c" />
-    <ClCompile Include="dm_tag.c" />
-    <ClCompile Include="g_ai.c" />
-    <ClCompile Include="g_chase.c" />
-    <ClCompile Include="g_cmds.c" />
-    <ClCompile Include="g_combat.c" />
-    <ClCompile Include="g_func.c" />
-    <ClCompile Include="g_items.c" />
-    <ClCompile Include="g_main.c" />
-    <ClCompile Include="g_misc.c" />
-    <ClCompile Include="g_monster.c" />
-    <ClCompile Include="g_newai.c" />
-    <ClCompile Include="g_newdm.c" />
-    <ClCompile Include="g_newfnc.c" />
-    <ClCompile Include="g_newtarg.c" />
-    <ClCompile Include="g_newtrig.c" />
-    <ClCompile Include="g_newweap.c" />
-    <ClCompile Include="g_phys.c" />
-    <ClCompile Include="g_save.c" />
-    <ClCompile Include="g_spawn.c" />
-    <ClCompile Include="g_sphere.c" />
-    <ClCompile Include="g_svcmds.c" />
-    <ClCompile Include="g_target.c" />
-    <ClCompile Include="g_trigger.c" />
-    <ClCompile Include="g_turret.c" />
-    <ClCompile Include="g_utils.c" />
-    <ClCompile Include="g_weapon.c" />
-    <ClCompile Include="m_actor.c" />
-    <ClCompile Include="m_berserk.c" />
-    <ClCompile Include="m_boss2.c" />
-    <ClCompile Include="m_boss3.c" />
-    <ClCompile Include="m_boss31.c" />
-    <ClCompile Include="m_boss32.c" />
-    <ClCompile Include="m_boss5.c" />
-    <ClCompile Include="m_brain.c" />
-    <ClCompile Include="m_carrier.c" />
-    <ClCompile Include="m_chick.c" />
-    <ClCompile Include="m_fixbot.c" />
-    <ClCompile Include="m_flash.c" />
-    <ClCompile Include="m_flipper.c" />
-    <ClCompile Include="m_float.c" />
-    <ClCompile Include="m_flyer.c" />
-    <ClCompile Include="m_gekk.c" />
-    <ClCompile Include="m_gladb.c" />
-    <ClCompile Include="m_gladiator.c" />
-    <ClCompile Include="m_gunner.c" />
-    <ClCompile Include="m_hover.c" />
-    <ClCompile Include="m_infantry.c" />
-    <ClCompile Include="m_insane.c" />
-    <ClCompile Include="m_medic.c" />
-    <ClCompile Include="g_modeltrace.c" />
-    <ClCompile Include="m_move.c" />
-    <ClCompile Include="m_mutant.c" />
-    <ClCompile Include="m_parasite.c" />
-    <ClCompile Include="m_soldier.c" />
-    <ClCompile Include="m_stalker.c" />
-    <ClCompile Include="m_supertank.c" />
-    <ClCompile Include="m_tank.c" />
-    <ClCompile Include="m_turret.c" />
-    <ClCompile Include="m_widow.c" />
-    <ClCompile Include="m_widow2.c" />
-    <ClCompile Include="p_client.c" />
-    <ClCompile Include="p_hud.c" />
-    <ClCompile Include="p_trail.c" />
-    <ClCompile Include="p_view.c" />
-    <ClCompile Include="p_weapon.c" />
-    <ClCompile Include="q_shared.c" />
+    <ClCompile Include="dm_ball.cpp" />
+    <ClCompile Include="dm_tag.cpp" />
+    <ClCompile Include="g_ai.cpp" />
+    <ClCompile Include="g_chase.cpp" />
+    <ClCompile Include="g_cmds.cpp" />
+    <ClCompile Include="g_combat.cpp" />
+    <ClCompile Include="g_func.cpp" />
+    <ClCompile Include="g_items.cpp" />
+    <ClCompile Include="g_main.cpp" />
+    <ClCompile Include="g_misc.cpp" />
+    <ClCompile Include="g_monster.cpp" />
+    <ClCompile Include="g_newai.cpp" />
+    <ClCompile Include="g_newdm.cpp" />
+    <ClCompile Include="g_newfnc.cpp" />
+    <ClCompile Include="g_newtarg.cpp" />
+    <ClCompile Include="g_newtrig.cpp" />
+    <ClCompile Include="g_newweap.cpp" />
+    <ClCompile Include="g_phys.cpp" />
+    <ClCompile Include="g_save.cpp" />
+    <ClCompile Include="g_spawn.cpp" />
+    <ClCompile Include="g_sphere.cpp" />
+    <ClCompile Include="g_svcmds.cpp" />
+    <ClCompile Include="g_target.cpp" />
+    <ClCompile Include="g_trigger.cpp" />
+    <ClCompile Include="g_turret.cpp" />
+    <ClCompile Include="g_utils.cpp" />
+    <ClCompile Include="g_weapon.cpp" />
+    <ClCompile Include="m_actor.cpp" />
+    <ClCompile Include="m_berserk.cpp" />
+    <ClCompile Include="m_boss2.cpp" />
+    <ClCompile Include="m_boss3.cpp" />
+    <ClCompile Include="m_boss31.cpp" />
+    <ClCompile Include="m_boss32.cpp" />
+    <ClCompile Include="m_boss5.cpp" />
+    <ClCompile Include="m_brain.cpp" />
+    <ClCompile Include="m_carrier.cpp" />
+    <ClCompile Include="m_chick.cpp" />
+    <ClCompile Include="m_fixbot.cpp" />
+    <ClCompile Include="m_flash.cpp" />
+    <ClCompile Include="m_flipper.cpp" />
+    <ClCompile Include="m_float.cpp" />
+    <ClCompile Include="m_flyer.cpp" />
+    <ClCompile Include="m_gekk.cpp" />
+    <ClCompile Include="m_gladb.cpp" />
+    <ClCompile Include="m_gladiator.cpp" />
+    <ClCompile Include="m_gunner.cpp" />
+    <ClCompile Include="m_hover.cpp" />
+    <ClCompile Include="m_infantry.cpp" />
+    <ClCompile Include="m_insane.cpp" />
+    <ClCompile Include="m_medic.cpp" />
+    <ClCompile Include="g_modeltrace.cpp" />
+    <ClCompile Include="m_move.cpp" />
+    <ClCompile Include="m_mutant.cpp" />
+    <ClCompile Include="m_parasite.cpp" />
+    <ClCompile Include="m_soldier.cpp" />
+    <ClCompile Include="m_stalker.cpp" />
+    <ClCompile Include="m_supertank.cpp" />
+    <ClCompile Include="m_tank.cpp" />
+    <ClCompile Include="m_turret.cpp" />
+    <ClCompile Include="m_widow.cpp" />
+    <ClCompile Include="m_widow2.cpp" />
+    <ClCompile Include="p_client.cpp" />
+    <ClCompile Include="p_hud.cpp" />
+    <ClCompile Include="p_trail.cpp" />
+    <ClCompile Include="p_view.cpp" />
+    <ClCompile Include="p_weapon.cpp" />
+    <ClCompile Include="q_shared.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
