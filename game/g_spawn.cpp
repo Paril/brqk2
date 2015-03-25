@@ -906,6 +906,13 @@ char *single_statusbar =
 "	pic 2 "
 "endif "
 
+"if 18"
+"	xv	116 "
+"	yb	-48 "
+"  num  2 19 "
+"   yb	-24 "
+"endif "
+
 // armor
 "if 4 "
 "	xv	200 "

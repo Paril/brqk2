@@ -1113,10 +1113,12 @@ void ClientCommand (edict_t *ent)
 		Cmd_PlayerList_f(ent);
 	else if (Q_stricmp (cmd, "entcount") == 0)		// PGM
 		Cmd_Ent_Count_f (ent);						// PGM
-	else if (Q_stricmp (cmd, "disguise") == 0)		// PGM
-	{
+	else if (Q_stricmp(cmd, "disguise") == 0)		// PGM
 		ent->flags |= FL_DISGUISED;
-	}
+	else if (Q_stricmp(cmd, "reload") == 0)
+		ent->client->want_reload = true;
+	else if (Q_stricmp(cmd, "melee") == 0)
+		ent->client->want_melee = true;
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }

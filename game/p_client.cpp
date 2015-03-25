@@ -2111,6 +2111,15 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 
 	client->oldbuttons = client->buttons;
 	client->buttons = ucmd->buttons;
+
+	// BRUTAL
+	if (client->want_reload)
+		client->buttons |= BUTTON_RELOAD;
+	if (client->want_melee)
+		client->buttons |= BUTTON_MELEE;
+
+	client->want_reload = client->want_melee = false;
+
 	client->latched_buttons |= client->buttons & ~client->oldbuttons;
 
 	// save light level the player is standing on for

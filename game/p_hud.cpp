@@ -406,6 +406,14 @@ void G_SetStats (edict_t *ent)
 		item = &itemlist[ent->client->ammo_index];
 		ent->client->ps.stats[STAT_AMMO_ICON] = gi.imageindex (item->icon);
 		ent->client->ps.stats[STAT_AMMO] = ent->client->pers.inventory[ent->client->ammo_index];
+
+		ent->client->ps.stats[STAT_CLIP] = ent->client->ps.stats[STAT_CLIP_COUNT] = 0;
+
+		if (ent->client->pers.weapon->flags & IT_USES_CLIP)
+		{
+			ent->client->ps.stats[STAT_CLIP] = 1;
+			ent->client->ps.stats[STAT_CLIP_COUNT] = ent->client->pers.loaded_ammo[ent->client->pers.weapon->weap_index];
+		}
 	}
 	
 	//

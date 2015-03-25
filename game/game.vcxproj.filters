@@ -10,6 +10,9 @@
     <Filter Include="Resource Files">
       <UniqueIdentifier>{38c3ee01-1895-4c8c-b11b-8cf0ae9055bc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\brutal">
+      <UniqueIdentifier>{75d105ff-b8fa-44e7-ad06-00ac413b5633}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="game.def">
@@ -217,6 +220,9 @@
     </ClCompile>
     <ClCompile Include="g_modeltrace.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p_weapons.cpp">
+      <Filter>Source Files\brutal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -35,6 +35,11 @@ void Weapon_ProxLauncher (edict_t *ent);
 //Rogue Weapons
 //=========
 
+// BRUTAL
+void Weapon_Pistol(edict_t *ent);
+void Weapon_Shotty(edict_t *ent);
+void Weapon_Mp5(edict_t *ent);
+
 gitem_armor_t jacketarmor_info	= { 25,  50, .30, .00, ARMOR_JACKET};
 gitem_armor_t combatarmor_info	= { 50, 100, .60, .30, ARMOR_COMBAT};
 gitem_armor_t bodyarmor_info	= {100, 200, .80, .60, ARMOR_BODY};
@@ -1627,6 +1632,16 @@ void SpawnItem (edict_t *ent, gitem_t *item)
 
 //======================================================================
 
+// BRUTAL
+int clip_ammo_counts[] =
+{
+	12,
+	7,
+	30,
+
+	-1
+};
+
 gitem_t	itemlist[] = 
 {
 	{
@@ -1804,6 +1819,80 @@ always owned, never in the world
 		0,
 /* precache */ "weapons/blastf1a.wav misc/lasfly.wav"
 	},
+
+// BRUTAL
+	/*QUAKED weapon_pistol (.3 .3 1) (-16 -16 -16) (16 16 16) TRIGGER_SPAWN
+	*/
+	{
+		"weapon_pistol",
+		Pickup_Weapon,
+		Use_Weapon,
+		Drop_Weapon,
+		Weapon_Pistol,
+		"misc/w_pkup.wav",
+		"models/weapons/g_pistol.md2", 0,
+		"models/weapons/v_pistol.md2",
+		/* icon */		"w_sshotgun",
+		/* pickup */	"Pistol",
+		0,
+		1,
+		"Bullets",
+		IT_WEAPON | IT_STAY_COOP | IT_USES_CLIP,
+		WEAP_BLASTER,
+		NULL,
+		0,
+		/* precache */ "",
+		WEAPON_PISTOL
+	},
+
+	/*QUAKED weapon_shotty (.3 .3 1) (-16 -16 -16) (16 16 16) TRIGGER_SPAWN
+	*/
+	{
+		"weapon_shotty",
+		Pickup_Weapon,
+		Use_Weapon,
+		Drop_Weapon,
+		Weapon_Shotty,
+		"misc/w_pkup.wav",
+		"models/weapons/g_shot.md2", EF_ROTATE,
+		"models/weapons/v_shot.md2",
+		/* icon */		"w_shotgun",
+		/* pickup */	"M3",
+		0,
+		1,
+		"Shells",
+		IT_WEAPON | IT_STAY_COOP | IT_USES_CLIP,
+		WEAP_SHOTGUN,
+		NULL,
+		0,
+		/* precache */ "",
+		WEAPON_SHOTGUN
+	},
+
+	/*QUAKED weapon_mp5 (.3 .3 1) (-16 -16 -16) (16 16 16) TRIGGER_SPAWN
+	*/
+	{
+		"weapon_mp5",
+		Pickup_Weapon,
+		Use_Weapon,
+		Drop_Weapon,
+		Weapon_Mp5,
+		"misc/w_pkup.wav",
+		"models/weapons/g_mp5.md2", 0,
+		"models/weapons/v_mp5.md2",
+		/* icon */		"w_machn",
+		/* pickup */	"MP5",
+		0,
+		1,
+		"Bullets",
+		IT_WEAPON | IT_STAY_COOP | IT_USES_CLIP,
+		WEAP_MACHINEGUN,
+		NULL,
+		0,
+		/* precache */ "",
+		WEAPON_MP5
+	},
+
 
 /*QUAKED weapon_shotgun (.3 .3 1) (-16 -16 -16) (16 16 16) TRIGGER_SPAWN
 */

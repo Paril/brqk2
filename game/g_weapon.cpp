@@ -114,6 +114,8 @@ fire_lead
 This is an internal support routine used for bullet/pellet based weapons.
 =================
 */
+#include <deque>
+
 static void fire_lead (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick, int te_impact, int hspread, int vspread, int mod)
 {
 	trace_t		tr;
@@ -127,6 +129,11 @@ static void fire_lead (edict_t *self, vec3_t start, vec3_t aimdir, int damage, i
 	int			content_mask = MASK_SHOT | MASK_WATER;
 	vec3_t cur_start;
 	edict_t *skip = self;
+	std::deque<edict_t*> hits;
+
+	hits.push_back(self);
+	self->old_contentmask = self->solid;
+	self->solid = SOLID_NOT;
 
 	VectorCopy(start, cur_start);
 
@@ -212,13 +219,20 @@ static void fire_lead (edict_t *self, vec3_t start, vec3_t aimdir, int damage, i
 				else
 				{
 					VectorCopy(tr.endpos, cur_start);
-					skip = tr.ent;
+					hits.push_back(tr.ent);
+					tr.ent->old_contentmask = tr.ent->solid;
+					tr.ent->solid = SOLID_NOT;
 					continue;
 				}
 			}
 
 			break;
 		}
+	}
+
+	for each (auto it in hits)
+	{
+		it->solid = it->old_contentmask;
 	}
 
 	// send gun puff / flash

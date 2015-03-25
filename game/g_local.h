@@ -93,7 +93,11 @@ typedef enum
 	WEAPON_READY, 
 	WEAPON_ACTIVATING,
 	WEAPON_DROPPING,
-	WEAPON_FIRING
+	WEAPON_FIRING,
+
+	// BRUTAL
+	WEAPON_RELOADING,
+	WEAPON_MELEE
 } weaponstate_t;
 
 typedef enum
@@ -255,6 +259,9 @@ typedef struct
 #define IT_KEY				0x00000010
 #define IT_POWERUP			0x00000020
 
+// BRUTAL
+#define IT_USES_CLIP		0x00000040
+
 // ROGUE
 #define IT_MELEE			0x00000040
 #define IT_NOT_GIVEABLE		0x00000080	// item can not be given
@@ -280,6 +287,16 @@ typedef struct
 #define WEAP_PLASMA				14		// PGM
 #define WEAP_PROXLAUNCH			15		// PGM
 #define WEAP_CHAINFIST			16		// PGM
+
+// BRUTAL, for reload
+enum
+{
+	WEAPON_PISTOL,
+	WEAPON_SHOTGUN,
+	WEAPON_MP5,
+
+	WEAPON_TOTAL
+};
 
 typedef struct gitem_s
 {
@@ -308,6 +325,8 @@ typedef struct gitem_s
 	int			tag;
 
 	char		*precaches;		// string of all models, sounds, and images this item will use
+
+	int			weap_index;
 } gitem_t;
 
 
@@ -732,6 +751,9 @@ typedef struct
 extern	field_t fields[];
 extern	gitem_t	itemlist[];
 
+// BRUTAL
+extern int clip_ammo_counts[];
+
 
 //
 // g_cmds.c
@@ -1150,6 +1172,9 @@ typedef struct
 #endif
 //ROGUE
 //=========
+
+	// BRUTAL
+	int			loaded_ammo[WEAPON_TOTAL];
 } client_persistant_t;
 
 // client data that stays across deathmatch respawns
@@ -1264,6 +1289,8 @@ struct gclient_s
 	edict_t		*owned_sphere;		// this points to the player's sphere
 //ROGUE
 //=======
+
+	bool	want_reload, want_melee;
 };
 
 typedef struct
@@ -1440,6 +1467,8 @@ struct edict_s
 
 	model_t		*collision_model;
 	flameinfo_t flameinfo;
+	
+	solid_t old_contentmask;
 };
 
 //=============

@@ -135,7 +135,9 @@ void models_convert()
 			sprintf(path, "%s/collision/%s.col", game->string, convert->name);
 
 			convert->model = model_create(convert->path);
-			model_save(convert->model, path);
+
+			if (convert->model)
+				model_save(convert->model, path);
 		}
 	}
 }
